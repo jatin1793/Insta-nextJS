@@ -2,3 +2,146 @@
 @tailwind components;
 @tailwind utilities;
 
+.sidenav{
+    position: fixed;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.sidenav_img{
+    width: 120px;
+    margin: auto;
+}
+
+.sidenav_buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.side_button{
+    display: flex;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    border: none;
+    margin: 5px 10px 5px 10px;
+    padding: 10px 15px 10px 15px;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.side_button:hover{
+    cursor: pointer;
+    background-color: #F2F2F2;
+}
+
+.side_button span{
+    font-size: 18px;
+    font-weight: 300;
+    margin-left: 10px;
+    font-family: gilroy;
+}
+
+.sidenav_menu{
+    position: fixed;
+    bottom: 3px;
+}
+
+
+
+.suggestions{
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+.suggestions_title{
+    color: grey;
+}
+
+.suggestions_username{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.username_left{
+    display: flex;
+}
+
+.username_info{
+    display:flex;
+    flex-direction: column;
+}
+
+.avatar{
+    margin-right: 10px;
+}
+
+
+.relation{
+    color: grey;
+    font-size: 12px;
+}
+
+.flw_btn{
+    color: #0095f6;
+    border: none;
+    background-color: transparent;
+    font-family: gilroy;
+}
+
+.flw_btn:hover{
+    cursor: pointer;
+    color: white;
+}
+
+.post{
+    width: 550px;
+    margin: 30px 40px 50px 40px;
+}
+
+.post_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1vh;
+}
+
+.post_header_author{
+    display: flex;
+    align-items: center;
+}
+
+.post_header_author h4{
+    margin-left: 10px;
+    font-weight: 300;
+}
+
+.post_header_author span{
+    color: grey;
+    font-size: 15px;
+    margin-left: 15px;
+}
+
+.post_image img{
+    width: 100%;
+    border-radius: 6px;
+    border: .6px solid rgba(128, 128, 128, 0.516);
+}
+
+.post_footericons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post_footericons:hover{
+    cursor: pointer;
+}
+
+.postIcon{
+    padding: 7px;
+    font-size: 30px;
+}

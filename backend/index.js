@@ -73,7 +73,7 @@ app.get("/hello/home", async (req, res) => {
     }
     catch(err){
         console.log(err)
-    }
+     }
 })
 
 app.listen(3001, () => {
