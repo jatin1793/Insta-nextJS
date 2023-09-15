@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import ExploreIcon from '@mui/icons-material/Explore';
@@ -7,9 +7,18 @@ import ChatIcon from '@mui/icons-material/Chat';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import MenuIcon from '@mui/icons-material/Menu';
-import LogoutIcon from '@mui/icons-material/Logout';
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import "../globals.css"
-import Link from 'next/link'
+
+import {
+  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem,
+  Button,
+} from "@material-tailwind/react";
+
+import Link from "next/link"
 
 export const metadata = {
   title: 'Create Next App',
@@ -19,58 +28,65 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-          <body suppressHydrationWarning>
-            <div>
-                <div className='sidenav'>
-                  <img className='sidenav_img ' src="https://i0.wp.com/www.dafontfree.io/wp-content/uploads/2020/12/instagram-new.png?resize=1100%2C750&ssl=1" />
-                  <div className='sidenav_buttons '>
-                    <button className='side_button'>
-                      <HomeIcon />
-                      <span>Home</span>
-                    </button>
-                    <button className='side_button'>
-                      <SearchIcon />
-                      <span>Search</span>
-                    </button>
-                    <button className='side_button'>
-                      <ExploreIcon />
-                      <span>Explore</span>
-                    </button>
-                    <button className='side_button'>
-                      <SlideshowIcon />
-                      <span>Reels</span>
-                    </button>
-                    <button className='side_button'>
-                      <ChatIcon />
-                      <span>Messages</span>
-                    </button>
-                    <button className='side_button'>
-                      <FavoriteBorderIcon />
-                      <span>Notifications</span>
-                    </button>
-                    <button className='side_button'>
-                      <AddCircleOutlineIcon />
-                      <Link href="/create">
-                        <span>Create</span>
-                      </Link>
-                    </button>
-                  </div>
-                  <div className="sidenav_menu">
-                    <button className='side_button'>
-                      <LogoutIcon />
-                      <span>Log Out</span>
-                    </button>
+      <body suppressHydrationWarning>
+        <div>
+          <nav>
+            <div className='sidenav'>
+              <img className='sidenav_img py-4' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjgOH-_XHjgCYAthu0wZgr2ugKpb4xNE94zQIjsktW&s" />
+              <div className='sidenav_buttons'>
+                <Link href="">
+                  <button className='side_button'>
+                    <HomeIcon />
+                    <span>Home</span>
+                  </button>
+                </Link>
+                <button className='side_button'>
+                  <SearchIcon />
+                  <span>Search</span>
+                </button>
+                <button className='side_button'>
+                  <ExploreIcon />
+                  <span>Explore</span>
+                </button>
+                <button className='side_button'>
+                  <SlideshowIcon />
+                  <span>Reels</span>
+                </button>
+                <button className='side_button'>
+                  <ChatIcon />
+                  <span>Messages</span>
+                </button>
+                <button className='side_button'>
+                  <PersonAddIcon />
+                  <span>People</span>
+                </button>
+                <Link href="">
+                  <button className='side_button'>
+                    <AddCircleOutlineIcon />
+                    <span>Create</span>
+                  </button>
+                </Link>
+              </div>
+              <div className="sidenav_menu">
+                <Menu>
+                  <MenuHandler>
                     <button className='side_button'>
                       <MenuIcon />
                       <span>Menu</span>
                     </button>
-                  </div>
-                </div>
+                  </MenuHandler>
+                  <MenuList>
+                    <MenuItem>Saved Posts</MenuItem>
+                    <MenuItem>Theme</MenuItem>
+                    <MenuItem>Log Out</MenuItem>
+                  </MenuList>
+                </Menu>
+              </div>
             </div>
-
-            
-            {children}
-          </body>
+          </nav>
+          {children}
+        </div>
+      </body>
     </html>
   )
 }

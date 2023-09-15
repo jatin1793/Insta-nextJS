@@ -1,5 +1,7 @@
+"use client"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import "./tailwind.css"
 
 export const metadata = {
   title: 'Create Next App',
@@ -10,8 +12,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body suppressHydrationWarning>
-          {children}
-        <ToastContainer autoClose={2000} />
+        <ToastContainer />
+        {children}
       </body>
     </html>
   )

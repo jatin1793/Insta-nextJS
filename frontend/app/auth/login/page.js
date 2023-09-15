@@ -1,10 +1,10 @@
 "use client"
 import React, { useState } from 'react'
-import '../../globals.css'
 import Link from 'next/link'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
 import { toast } from 'react-toastify'
+import "../../tailwind.css"
 
 
 const page = () => {
